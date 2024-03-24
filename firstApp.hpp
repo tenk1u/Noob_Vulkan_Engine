@@ -6,6 +6,7 @@
 #define NOOBVE_FIRSTAPP_HPP
 
 #include "nveWindow.hpp"
+#include "nvePipeline.hpp"
 
 namespace nve {
 
@@ -18,6 +19,7 @@ namespace nve {
 
     private:
         NveWindow m_nveWindow{WIDTH, HEIGHT, "DOTA 3"};
+        NvePipeline m_nvePipeline{"shaders/simpleVert.spv", "shaders/simpleFrag.spv"};
     };
 
 } // nve

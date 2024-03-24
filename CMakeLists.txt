@@ -13,6 +13,11 @@ add_executable(${PROJECT_NAME} main.cpp
         nveWindow.cpp
         firstApp.cpp
         firstApp.hpp
+        nvePipeline.cpp
+        nvePipeline.hpp
 )
+
+# add shaders files
+file(COPY shaders DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
 
 target_link_libraries(${PROJECT_NAME} glfw ${GLFW_LIBRARIES} Vulkan::Vulkan glm::glm)
